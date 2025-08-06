@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Adrian and Sons Group Limited | Construction & Home Refurbishment UK</title>
+    <meta name="description" content="Discover our comprehensive construction services: home refurbishment, loft conversions, kitchen & bathroom installations, extensions, and painting across the UK.">
+    <meta name="keywords" content="construction services UK, home refurbishment, loft conversions, kitchen installation, bathroom renovation, home extensions, painting decorating">
+    <meta name="author" content="Adrian and Sons Group Limited">
+    <meta property="og:title" content="Construction Services - Adrian and Sons Group Limited">
+    <meta property="og:description" content="Professional construction and refurbishment services including loft conversions, kitchen installations, bathroom renovations, and home extensions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adrianandsonsgrouplimited.co.uk/services">
+    
+    <link rel="canonical" href="https://adrianandsonsgrouplimited.co.uk/services">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), 
+                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        }
+        
+        .service-card {
+            transition: all 0.4s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .sticky-nav {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .sticky-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 40;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .sticky-cta {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Sticky CTA Button -->
+    <div class="sticky-cta">
+        <a href="#quote" class="btn-primary text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg inline-flex items-center">
+            <i class="fas fa-calculator mr-2"></i>
+            Free Quote
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav x-data="{ open: false }" class="fixed w-full z-50 transition-all duration-300" 
+         :class="{ 'sticky-nav': window.pageYOffset > 50 }" 
+         x-init="window.addEventListener('scroll', () => { $nextTick(() => { $el.classList.toggle('sticky-nav', window.pageYOffset > 50) }) })">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-gray-900">
+                        <span class="text-amber-600">Adrian</span> & Sons
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="services.html" class="text-gray-900 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="gallery.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Gallery</a>
+                        <a href="testimonials.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Reviews</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#quote" class="btn-primary text-white px-6 py-2 rounded-lg text-sm font-semibold">
+                        Get Free Quote
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="open = !open" class="text-gray-700 hover:text-amber-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div x-show="open" x-transition class="md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white rounded-lg shadow-lg mt-2">
+                    <a href="index.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">About</a>
+                    <a href="services.html" class="text-gray-900 block px-3 py-2 text-base font-medium">Services</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">Gallery</a>
+                    <a href="testimonials.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">Reviews</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">Contact</a>
+                    <a href="#quote" class="btn-primary text-white block px-3 py-2 text-base font-medium rounded-lg mt-2">Get Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-96 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Our Construction 
+                    <span class="text-amber-400">Services</span>
+                </h1>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                    From complete home refurbishments to specialized installations, we deliver exceptional craftsmanship across all aspects of construction and renovation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    What We Do Best
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our comprehensive range of construction and refurbishment services covers every aspect of home improvement, delivered with family-run care and professional expertise.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Home Refurbishment -->
+                <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="gradient-bg p-8 text-center">
+                        <div class="service-icon bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-home text-amber-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Home Refurbishment</h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            Complete home renovations to refresh and modernize entire properties. We transform outdated spaces into stunning, functional homes that reflect your style and needs.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="#quote" class="text-amber-600 font-semibold hover:text-amber-700 inline-flex items-center">
+                                Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>2-8 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Loft Conversions -->
+                <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="gradient-bg p-8 text-center">
+                        <div class="service-icon bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-stairs text-amber-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Loft Conversions</h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            Convert unused attic space into functional living areas. Create additional bedrooms, home offices, or entertainment spaces with expert structural work and design.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="#quote" class="text-amber-600 font-semibold hover:text-amber-700 inline-flex items-center">
+                                Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>3-6 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Kitchen Installations -->
+                <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="gradient-bg p-8 text-center">
+                        <div class="service-icon bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-utensils text-amber-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Kitchen Installations</h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            Bespoke kitchens designed and installed to the highest standards. From contemporary to traditional styles, we create the heart of your home with precision and care.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="#quote" class="text-amber-600 font-semibold hover:text-amber-700 inline-flex items-center">
+                                Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>2-4 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Bathroom Renovations -->
+                <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="gradient-bg p-8 text-center">
+                        <div class="service-icon bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bath text-amber-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Bathroom Renovations</h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            Spa-like bathroom remodels with elegant tiling and premium fixtures. Transform your bathroom into a luxurious retreat with modern amenities and timeless design.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="#quote" class="text-amber-600 font-semibold hover:text-amber-700 inline-flex items-center">
+                                Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>1-3 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Home Extensions -->
+                <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="gradient-bg p-8 text-center">
+                        <div class="service-icon bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-expand-arrows-alt text-amber-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Home Extensions</h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            Add extra space with seamless structural extensions. Whether single or double-story, we create additional living areas that blend perfectly with your existing home.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="#quote" class="text-amber-600 font-semibold hover:text-amber-700 inline-flex items-center">
+                                Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>4-12 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Painting & Decorating -->
+                <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="gradient-bg p-8 text-center">
+                        <div class="service-icon bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-paint-roller text-amber-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Painting & Decorating</h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            Interior and exterior painting with a focus on detail and finish. Professional preparation, premium materials, and meticulous application for lasting, beautiful results.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="#quote" class="text-amber-600 font-semibold hover:text-amber-700 inline-flex items-center">
+                                Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>1-2 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Our Process
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From initial consultation to project completion, we ensure a smooth, transparent process that keeps you informed every step of the way.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-amber-600 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Consultation</h3>
+                    <p class="text-gray-600">Free home visit to discuss your vision and requirements</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Quote</h3>
+                    <p class="text-gray-600">Detailed, transparent pricing with no hidden costs</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-green-600 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Planning</h3>
+                    <p class="text-gray-600">Detailed project planning and material sourcing</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-purple-600 font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Delivery</h3>
+                    <p class="text-gray-600">Expert execution with regular updates and quality checks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="quote" class="py-20 bg-amber-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Ready to Start Your Project?
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Get a detailed quote for your construction or refurbishment project. Our team is ready to bring your vision to life with expert craftsmanship and professional service.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="index.html#quote" class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center">
+                    <i class="fas fa-calculator mr-2"></i>
+                    Get Your Free Quote
+                </a>
+                <a href="tel:07710563430" class="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center border-2 border-gray-200">
+                    <i class="fas fa-phone mr-2 text-green-600"></i>
+                    Call: 07710 563 430
+                </a>
+            </div>
+            
+            <div class="mt-8 text-sm text-gray-500">
+                <p>✓ Free consultations ✓ Transparent pricing ✓ Fully insured ✓ Local family business</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-bold">
+                            <span class="text-amber-600">Adrian</span> & Sons Group Limited
+                        </span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Family-run construction company delivering exceptional home refurbishment and renovation services across the UK.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-amber-400 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-amber-400 transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-amber-400 transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-amber-400 transition-colors">Gallery</a></li>
+                        <li><a href="testimonials.html" class="text-gray-400 hover:text-amber-400 transition-colors">Reviews</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-amber-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Home Refurbishment</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Loft Conversions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Kitchen Installations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Bathroom Installations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Home Extensions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Painting & Decorating</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Adrian and Sons Group Limited. All rights reserved. | 
+                    <a href="#" class="hover:text-amber-400 transition-colors">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-amber-400 transition-colors">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all service cards and sections
+        document.querySelectorAll('.service-card, section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 
