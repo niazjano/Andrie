@@ -3,380 +3,480 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Adrian and Sons Group Limited | Family-Run Construction Company UK</title>
-    <meta name="description" content="Learn about Adrian and Sons Group Limited - a trusted family-run construction and refurbishment company serving the UK with over 10 years of experience.">
-    <meta name="keywords" content="about Adrian and Sons, family construction company UK, trusted builders, home refurbishment team">
-    <meta name="author" content="Adrian and Sons Group Limited">
-    <meta property="og:title" content="About Adrian and Sons Group Limited - Family-Run Construction">
-    <meta property="og:description" content="Discover our story, values, and commitment to quality craftsmanship in construction and home refurbishment across the UK.">
+    <title>About Adrian & Sons | Family-Run Builders & Renovation Specialists</title>
+    <meta name="description" content="Family-run construction experts delivering high-quality residential and commercial projects. Safety, sustainability, and innovation at every stage. Learn more.">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://adrianandsonsgrouplimited.co.uk/about">
-    
-    <link rel="canonical" href="https://adrianandsonsgrouplimited.co.uk/about">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta property="og:url" content="https://adrianandsons.co.uk/about">
+    <meta property="og:title" content="About Adrian & Sons | Family-Run Builders">
+    <meta property="og:description" content="Family-run construction experts delivering high-quality residential and commercial projects. Safety, sustainability, and innovation at every stage.">
+    <meta property="og:image" content="https://adrianandsons.co.uk/images/og-about.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://adrianandsons.co.uk/about">
+    <meta property="twitter:title" content="About Adrian & Sons | Family-Run Builders">
+    <meta property="twitter:description" content="Family-run construction experts delivering high-quality residential and commercial projects.">
+    <meta property="twitter:image" content="https://adrianandsons.co.uk/images/og-about.jpg">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Adrian & Sons Group Limited",
+        "url": "https://adrianandsons.co.uk",
+        "description": "Family-run construction and property refurbishment specialists",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB"
+        },
+        "telephone": "+447710563430",
+        "sameAs": [
+            "https://www.facebook.com/adrianandsons",
+            "https://www.instagram.com/adrianandsons"
+        ],
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 51.5074,
+                "longitude": -0.1278
+            },
+            "geoRadius": "50000"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Construction Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Home Refurbishment"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Loft Conversions"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Kitchen Installations"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Bathroom Renovations"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Home Extensions"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Painting & Decorating"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22c55e',
+                        secondary: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), 
-                        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
-        }
-        
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-in;
+        .fade-in {
+            animation: fadeIn 0.6s ease-in-out;
         }
         
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
         
-        .sticky-nav {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
-        .value-card {
+        .stat-counter {
             transition: all 0.3s ease;
         }
         
-        .value-card:hover {
+        .process-step:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.15);
         }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-gray-50">
     <!-- Navigation -->
-    <nav x-data="{ open: false }" class="fixed w-full z-50 transition-all duration-300" 
-         :class="{ 'sticky-nav': window.pageYOffset > 50 }" 
-         x-init="window.addEventListener('scroll', () => { $nextTick(() => { $el.classList.toggle('sticky-nav', window.pageYOffset > 50) }) })">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="text-2xl font-bold text-gray-900">
-                        <span class="text-amber-600">Adrian</span> & Sons
-                    </a>
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-900">Adrian & Sons</a>
                 </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                        <a href="about.html" class="text-gray-900 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
-                        <a href="services.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
-                        <a href="gallery.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Gallery</a>
-                        <a href="testimonials.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Reviews</a>
-                        <a href="contact.html" class="text-gray-700 hover:text-amber-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
-                    </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-primary font-semibold">About</a>
+                    <a href="services.html" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-primary transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                    <a href="tel:07710563430" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">Call Now</a>
                 </div>
-                
-                <!-- CTA Button -->
-                <div class="hidden md:block">
-                    <a href="#quote" class="btn-primary text-white px-6 py-2 rounded-lg text-sm font-semibold">
-                        Get Free Quote
-                    </a>
-                </div>
-                
                 <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button @click="open = !open" class="text-gray-700 hover:text-amber-600 focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
-            
-            <!-- Mobile Navigation -->
-            <div x-show="open" x-transition class="md:hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white rounded-lg shadow-lg mt-2">
-                    <a href="index.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">Home</a>
-                    <a href="about.html" class="text-gray-900 block px-3 py-2 text-base font-medium">About</a>
-                    <a href="services.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">Services</a>
-                    <a href="gallery.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">Gallery</a>
-                    <a href="testimonials.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">Reviews</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-amber-600 block px-3 py-2 text-base font-medium">Contact</a>
-                    <a href="#quote" class="btn-primary text-white block px-3 py-2 text-base font-medium rounded-lg mt-2">Get Free Quote</a>
-                </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-primary font-semibold">About</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+                <a href="tel:07710563430" class="block px-3 py-2 bg-primary text-white rounded-lg mx-3 mt-2 text-center">Call Now</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-96 flex items-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="animate-fade-in">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Family-Run Craftsmanship, 
-                    <span class="text-amber-400">Built on Trust</span>
-                </h1>
-                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
-                    Discover the story behind Adrian and Sons Group Limited and our commitment to transforming homes across the UK.
+    <section id="about" class="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <p class="text-primary font-semibold mb-4">About Adrian & Sons</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Family-Run Craftsmanship.<br>Modern Build Quality.</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                    We're a family business with years of experience in residential and commercial construction—combining tradition with innovative building concepts to deliver spaces people love.
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us Content -->
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    Our Story
-                </h2>
-                <p class="text-xl text-gray-600 leading-relaxed">
-                    Adrian and Sons Group Limited is a family-owned construction and refurbishment business based in the UK. For over a decade, we've been transforming homes with high-quality workmanship, honest communication, and a personal touch.
-                </p>
-            </div>
-            
-            <!-- Team Image -->
-            <div class="mb-16">
-                <div class="relative rounded-2xl overflow-hidden shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                         alt="Adrian and Sons construction team at work" 
-                         class="w-full h-96 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 text-white">
-                        <p class="text-lg font-semibold">Our dedicated team delivering quality craftsmanship</p>
-                    </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-colors">
+                        Get a Free Quote
+                    </a>
+                    <a href="gallery.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                        See Our Work
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Values Section -->
-    <section class="py-20 bg-gray-50">
+    <!-- At a Glance Cards -->
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Our Core Values
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    These principles guide every project we undertake and every relationship we build.
-                </p>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Adrian & Sons at a glance</h2>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="value-card bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-handshake text-amber-600 text-2xl"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Reliability</h3>
-                    <p class="text-gray-600">We show up when we say we will and deliver on our promises, every single time.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Tailored Projects</h3>
+                    <p class="text-gray-600">High-quality residential and commercial builds tailored to your needs.</p>
                 </div>
-                
-                <div class="value-card bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-award text-blue-600 text-2xl"></i>
+                <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Detail-Obsessed</h3>
+                    <p class="text-gray-600">From design to completion, every detail is meticulously handled.</p>
+                </div>
+                <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Built on Trust</h3>
+                    <p class="text-gray-600">Clear communication, reliable timelines, and lasting relationships.</p>
+                </div>
+                <div class="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">End-to-End Delivery</h3>
+                    <p class="text-gray-600">Design support, build, finishes, and aftercare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We Stand For</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="value-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.5-4a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Safety</h3>
+                    <p class="text-gray-600">We maintain rigorous site standards to protect clients, teams, and neighbours.</p>
+                </div>
+                <div class="value-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Sustainability</h3>
+                    <p class="text-gray-600">Efficient materials, smart design, and responsible waste practices.</p>
+                </div>
+                <div class="value-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
+                    <p class="text-gray-600">Modern methods and finishes that elevate comfort, efficiency, and style.</p>
+                </div>
+                <div class="value-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Quality</h3>
-                    <p class="text-gray-600">We use premium materials and proven techniques to ensure lasting results.</p>
-                </div>
-                
-                <div class="value-card bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Integrity</h3>
-                    <p class="text-gray-600">Honest pricing, transparent communication, and ethical business practices.</p>
-                </div>
-                
-                <div class="value-card bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-home text-purple-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Family</h3>
-                    <p class="text-gray-600">We treat every home like our own and every client like family.</p>
+                    <p class="text-gray-600">Skilled trades, premium materials, and inspections at each stage.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Homeowners Trust Us -->
-    <section class="py-20 bg-white">
+    <!-- Company Story -->
+    <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Why Homeowners Trust Us
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Our reputation is built on results, relationships, and the trust of families across the UK.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="text-center">
-                    <div class="bg-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-calendar-check text-amber-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Over 10 Years of Experience</h3>
-                    <p class="text-gray-600 text-lg">
-                        More than a decade of transforming homes and perfecting our craft across the UK construction industry.
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Adrian & Sons is a family-run builder with a long-standing tradition of doing things the right way. Our dedicated team delivers high-quality residential and commercial projects tailored to each brief. We prioritise safety, sustainability, and innovation—striving to exceed expectations while building relationships that last.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                        We specialise in high-quality residential and commercial projects tailored to our clients' unique needs. Our dedicated team is committed to excellence, ensuring every detail is meticulously handled from design to completion.
                     </p>
                 </div>
-                
-                <div class="text-center">
-                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-users text-green-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Local, Family-Run</h3>
-                    <p class="text-gray-600 text-lg">
-                        As a family business, we understand the importance of home and bring that personal touch to every project.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-star text-blue-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">5-Star Rated Projects</h3>
-                    <p class="text-gray-600 text-lg">
-                        Consistently delivering exceptional results that exceed expectations and earn glowing reviews.
-                    </p>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Adrian & Sons construction team at work" 
+                         class="w-full h-96 object-cover rounded-xl shadow-lg">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section id="quote" class="py-20 bg-amber-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Ready to Transform Your Home?
-            </h2>
-            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Experience the Adrian & Sons difference. Get your free, no-obligation quote today and discover why families across the UK choose us for their home transformations.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="index.html#quote" class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center">
-                    <i class="fas fa-calculator mr-2"></i>
-                    Get Your Free Quote
+    <!-- Process Section -->
+    <section id="process" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="process-step bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Consultation</h3>
+                    <p class="text-gray-600">We listen, survey, and clarify goals and budget.</p>
+                </div>
+                <div class="process-step bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Design & Scope</h3>
+                    <p class="text-gray-600">We refine concepts, materials, timeline, and fixed pricing.</p>
+                </div>
+                <div class="process-step bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Build & Manage</h3>
+                    <p class="text-gray-600">Dedicated project lead, clear milestones, tidy site.</p>
+                </div>
+                <div class="process-step bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Handover & Aftercare</h3>
+                    <p class="text-gray-600">Thorough snagging, documentation, and support.</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p class="text-gray-600 font-semibold">Fully insured. All work guaranteed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Badges -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Proudly recognised by industry bodies and loved by homeowners</h2>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
+                <div class="w-32 h-16 bg-gray-200 rounded flex items-center justify-center">
+                    <span class="text-gray-600 font-semibold">Checkatrade</span>
+                </div>
+                <div class="w-32 h-16 bg-gray-200 rounded flex items-center justify-center">
+                    <span class="text-gray-600 font-semibold">TrustMark</span>
+                </div>
+                <div class="w-32 h-16 bg-gray-200 rounded flex items-center justify-center">
+                    <span class="text-gray-600 font-semibold">FMB</span>
+                </div>
+                <div class="w-32 h-16 bg-gray-200 rounded flex items-center justify-center">
+                    <span class="text-gray-600 font-semibold">NICEIC</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="stat-counter">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">10+</div>
+                    <div class="text-lg">Years Experience</div>
+                </div>
+                <div class="stat-counter">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">250+</div>
+                    <div class="text-lg">Projects Delivered</div>
+                </div>
+                <div class="stat-counter">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">4.9★</div>
+                    <div class="text-lg">Average Rating</div>
+                </div>
+                <div class="stat-counter">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">98%</div>
+                    <div class="text-lg">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to build your dream space?</h2>
+            <p class="text-xl text-gray-300 mb-8">Let's turn your ideas into a beautifully built reality.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-colors">
+                    Get a Free Quote
                 </a>
-                <a href="tel:07710563430" class="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center border-2 border-gray-200">
-                    <i class="fas fa-phone mr-2 text-green-600"></i>
-                    Call: 07710 563 430
+                <a href="tel:07710563430" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                    Call Us
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-12">
+    <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <span class="text-2xl font-bold">
-                            <span class="text-amber-600">Adrian</span> & Sons Group Limited
-                        </span>
-                    </div>
-                    <p class="text-gray-400 mb-4 max-w-md">
-                        Family-run construction company delivering exceptional home refurbishment and renovation services across the UK.
-                    </p>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Adrian & Sons</h3>
+                    <p class="text-gray-400">Family-run construction and property refurbishment specialists.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white transition-colors">Home Refurbishment</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Loft Conversions</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Kitchen Installations</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Bathroom Renovations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="tel:07710563430" class="hover:text-white transition-colors">07710 563430</a></li>
+                        <li><a href="mailto:info@adrianandsons.co.uk" class="hover:text-white transition-colors">info@adrianandsons.co.uk</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
                         </a>
-                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
-                            <i class="fab fa-instagram"></i>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
                         </a>
-                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
                         </a>
                     </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-amber-400 transition-colors">Home</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-amber-400 transition-colors">About Us</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-amber-400 transition-colors">Services</a></li>
-                        <li><a href="gallery.html" class="text-gray-400 hover:text-amber-400 transition-colors">Gallery</a></li>
-                        <li><a href="testimonials.html" class="text-gray-400 hover:text-amber-400 transition-colors">Reviews</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-amber-400 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Services -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Our Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Home Refurbishment</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Loft Conversions</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Kitchen Installations</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Bathroom Installations</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Home Extensions</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-amber-400 transition-colors">Painting & Decorating</a></li>
-                    </ul>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p class="text-gray-400">
-                    © 2024 Adrian and Sons Group Limited. All rights reserved. | 
-                    <a href="#" class="hover:text-amber-400 transition-colors">Privacy Policy</a> | 
-                    <a href="#" class="hover:text-amber-400 transition-colors">Terms of Service</a>
-                </p>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Adrian & Sons Group Limited. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Smooth Scrolling Script -->
+    <!-- Mobile menu JavaScript -->
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
             });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all value cards and sections
-        document.querySelectorAll('.value-card, section').forEach(el => {
-            observer.observe(el);
         });
     </script>
 </body>
